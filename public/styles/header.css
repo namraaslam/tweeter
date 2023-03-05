@@ -1,0 +1,23 @@
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  height: 400px;
+  margin-top: 120px;
+  width: 100%;
+  background-color: #ebc8e9;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.name{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.image{
+  margin-top: 50px;
+  color: #ebc8e9;
+}
