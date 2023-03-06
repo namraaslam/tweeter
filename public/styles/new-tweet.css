@@ -6,10 +6,21 @@ font-family: "Bungee", sans-serif;
 border: none;
 }
 
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(94, 151, 243, 0.24);
+}
+
 .button-div{
   display: flex;
   justify-content: space-between;
 }
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(94, 151, 243, 0.24);
+}
+
 
 .counter{
   font-family: "Bungee", sans-serif;

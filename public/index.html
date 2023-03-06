@@ -33,13 +33,15 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
 </head>
 
+<!-- Timeago Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="nav-logo">tweeter</span>
     <p class="nav-text">
-      <span class="text-line">Write a new tweet</span>
+      <span class="text-line"><b>Write</b> a new tweet</span>
       <i class="fa-solid fa-angles-down"></i>
     </p>
   </nav>
@@ -57,7 +59,7 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST" class="tweet-form">
+      <form action="/tweets" method="POST" class="tweet-form">
         <div>
           <label for="tweet-text">What are you humming about?</label>
         </div>
