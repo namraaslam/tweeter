@@ -47,3 +47,27 @@ label {
   display: flex;
   flex-direction: column;
 }
+
+.long-validation-error{
+  width: 100%;
+  border: solid 3px;
+  text-align: center;
+  color: rgb(226, 151, 179);
+  font-weight: bold;
+  font-family:'Source Sans Pro', sans-serif;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.empty-validation-error{
+  width: 100%;
+  border: solid 3px;
+  text-align: center;
+  color: rgb(226, 151, 179);
+  font-weight: bold;
+  font-family:'Source Sans Pro', sans-serif;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -36,12 +36,14 @@
 <!-- Timeago Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="nav-logo">tweeter</span>
     <p class="nav-text">
-      <span class="text-line"><b>Write</b> a new tweet</span>
+      <span class="text-line">Write a new tweet</span>
       <i class="fa-solid fa-angles-down"></i>
     </p>
   </nav>
@@ -58,7 +60,13 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <div class="empty-validation-error" hidden="hidden1">
+        <span> ⚠️ ERROR: TWEET CAN'T BE EMPTY!</span>
+      </div>
+      <div class="long-validation-error" hidden="hidden2">
+        <span> ⚠️ ERROR: TWEET IS TOO LONG!</span>
+      </div>
+      <h2></h2>
       <form action="/tweets" method="POST" class="tweet-form">
         <div>
           <label for="tweet-text">What are you humming about?</label>
@@ -76,32 +84,7 @@
 
     <!-- fake tweet -->
     <section class="the-tweets">
-      <article>
-        <div class="tweet-creater">
-          <div>
-            <img class="img" src="https://i.imgur.com/nlhLi3I.png" alt="avatar">
-            <span>Lana</span>
-          </div>
-          <div class="username">
-            <span>@LanaDelRey</span>
-          </div>
-        </div>
-        <div class="tweet-content">
-          <p>Money is the anthem of success.</p>
-        </div>
-        <div class="time-created">
-          <div>
-            <span>10 days ago</span>
-          </div>
-        </div>
-        <div class="icons">
-          <span>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-          </span>
-        </div>
-      </article>
+    
     </section>
 
   </main>
