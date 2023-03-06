@@ -15,6 +15,10 @@ border: none;
   font-family: "Bungee", sans-serif;
 }
 
+.pink{
+  color: hotpink;
+}
+
 
 /* text styling */
 textarea{
