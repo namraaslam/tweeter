@@ -45,12 +45,11 @@ i{
 }
 
 i:hover{
-  color: #ebc8e9;
+  color: #ff01f2;
 }
 
 .icons{
   font-size: small;
-  display: flex;
   justify-content: right;
 }
 
