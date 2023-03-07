@@ -1,7 +1,8 @@
-header{
+header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
 
 
   height: 400px;
@@ -12,11 +13,20 @@ header{
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-.name{
+.name {
   font-family: 'Source Sans Pro', sans-serif;
+
 }
 
-.image{
-  margin-top: 30px;
+.image {
+  margin-top: 15px;
+  padding-top: 20px;
   color: #ebc8e9;
+}
+
+@media only screen and (min-width: 960px) {
+  header {
+    width: 30%;
+    margin-top: 200px;
+  }
 }

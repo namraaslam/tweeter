@@ -1,5 +1,4 @@
 .the-tweets {
-border: solid;
 width: 100%;
 margin-left: auto;
 margin-right: auto;
@@ -56,7 +55,8 @@ i:hover{
 }
 
 article{
-  border: solid;
+  margin-bottom: 2em;
+  border: 2px solid;
   padding: 25px;
   padding-bottom: 10px;
 }

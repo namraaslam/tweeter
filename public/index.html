@@ -34,9 +34,12 @@
 </head>
 
 <!-- Timeago Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
+<!-- Disable viewport  -->
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
 <body>
   <!-- Top nav bar (fixed) -->
@@ -66,7 +69,7 @@
       <div class="long-validation-error" hidden="hidden2">
         <span> ⚠️ ERROR: TWEET IS TOO LONG!</span>
       </div>
-      <h2></h2>
+      <h1></h1>
       <form action="/tweets" method="POST" class="tweet-form">
         <div>
           <label for="tweet-text">What are you humming about?</label>
@@ -84,9 +87,7 @@
 
     <!-- fake tweet -->
     <section class="the-tweets">
-    
     </section>
-
   </main>
 </body>
 

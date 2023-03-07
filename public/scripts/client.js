@@ -5,10 +5,7 @@
  */
 
 // Fake data taken from initial-tweets.json
-$(document).ready(function() {
-
-  const data = [
-  ]
+$(document).ready(function () {
 
   // Escape function from lighthouse to prevent XXS
   const escape = function (str) {
@@ -16,17 +13,14 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
-  const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  for (const tweet of tweets) {
-    $(".the-tweets").prepend(createTweetElement(tweet));
+
+  const renderTweets = function (tweets) {
+    for (const tweet of tweets) {
+      $(".the-tweets").prepend(createTweetElement(tweet));
+    }
   }
-  }
-  
-  const createTweetElement = function(tweet) {
+
+  const createTweetElement = function (tweet) {
     const time = timeago.format(tweet.created_at);
     return $(`
       <article>
@@ -57,51 +51,52 @@ $(document).ready(function() {
       </article>
     `);
   };
-  renderTweets(data);
-  
+
   const tweetForm = $('.tweet-form');
-  tweetForm.on('submit', function(event) {
+  tweetForm.on('submit', function (event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     const tweetText = $(`#tweet-text`).val();
     console.log(tweetText);
-  
+
     const length = tweetText.trim().length;
     if (length === 0) {
       return $(".empty-validation-error").removeClass("hidden1").slideDown(1000).slideUp(4600);
     } else if (length > 140) {
       return $(".long-validation-error").removeClass("hidden2").slideDown(1000).slideUp(4600);
-    } else { 
+    } else {
       $.post('/tweets', serializedData)
-      .done(function(data) {
-      $(".empty-validation-error").addClass("hidden1");
-      $(".long-validation-error").addClass("hidden2");
-      })
-      .done(function(data) {
-      loadTweets();
-      })
-      .fail(function(error) {
-       console.error(error);
-      });
-     }
-   }
+        .done(function (data) {
+          $(".empty-validation-error").addClass("hidden1");
+          $(".long-validation-error").addClass("hidden2");
+        })
+        .done(function (data) {
+          loadTweets();
+          $("textarea").val("");
+          $(".counter").text(140);
+        })
+        .fail(function (error) {
+          console.error(error);
+        });
+    }
+  }
   );
+
   const loadTweets = () => {
     $.ajax({
       url: "/tweets",
       type: "GET",
       dataType: "json",
-      success: function(res) {
+      success: function (res) {
         $('.the-tweets').empty();
         renderTweets(res);
       },
-      error: function(error) {
+      error: function (error) {
         console.error(error);
       }
     });
   };
-  
+
   loadTweets();
-  
-  });
-  
+
+});
